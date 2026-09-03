@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">Granger 候选变量加入后 RMSE 改善幅度（负值按 0 显示）</text>
+<text x="200" y="75.4" text-anchor="end" font-size="12" font-family="Arial">工业</text>
+<rect x="210" y="55.0" width="700.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="916.0" y="75.4" font-size="11" font-family="Arial">6.22%</text>
+<text x="200" y="131.11428571428573" text-anchor="end" font-size="12" font-family="Arial">制造业</text>
+<rect x="210" y="110.71428571428572" width="604.5483677414093" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="820.5483677414093" y="131.11428571428573" font-size="11" font-family="Arial">5.37%</text>
+<text x="200" y="186.82857142857145" text-anchor="end" font-size="12" font-family="Arial">非金属矿物制品业</text>
+<rect x="210" y="166.42857142857144" width="133.36589207828249" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="349.3658920782825" y="186.82857142857145" font-size="11" font-family="Arial">1.18%</text>
+<text x="200" y="242.54285714285714" text-anchor="end" font-size="12" font-family="Arial">纺织业</text>
+<rect x="210" y="222.14285714285714" width="68.53208764488465" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="284.53208764488465" y="242.54285714285714" font-size="11" font-family="Arial">0.61%</text>
+<text x="200" y="298.25714285714287" text-anchor="end" font-size="12" font-family="Arial">电子</text>
+<rect x="210" y="277.8571428571429" width="0.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="216.0" y="298.25714285714287" font-size="11" font-family="Arial">0.00%</text>
+<text x="200" y="353.97142857142853" text-anchor="end" font-size="12" font-family="Arial">大工业电量</text>
+<rect x="210" y="333.57142857142856" width="0.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="216.0" y="353.97142857142853" font-size="11" font-family="Arial">0.00%</text>
+<text x="200" y="409.68571428571425" text-anchor="end" font-size="12" font-family="Arial">商业用电</text>
+<rect x="210" y="389.2857142857143" width="0.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="216.0" y="409.68571428571425" font-size="11" font-family="Arial">0.00%</text>
+<text x="200" y="465.4" text-anchor="end" font-size="12" font-family="Arial">合计</text>
+<rect x="210" y="445.0" width="0.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="216.0" y="465.4" font-size="11" font-family="Arial">0.00%</text>
+</svg>

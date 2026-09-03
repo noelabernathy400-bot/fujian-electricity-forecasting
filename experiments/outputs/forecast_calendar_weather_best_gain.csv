@@ -1,0 +1,7 @@
+﻿target,best_model,best_rmse_gain_pct
+商业用电,ridge_own_weather_holiday,27.846839294266424
+居民生活,ridge_own_weather,23.36414982521976
+合计,ridge_category_weather_holiday,11.453269726138082
+大工业电量,ridge_own_holiday,10.016147002472442
+工业,ridge_own_holiday,8.03607552701905
+制造业,ridge_own_holiday,5.392958542584281

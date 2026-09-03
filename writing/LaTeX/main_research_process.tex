@@ -1,0 +1,644 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+
+\usepackage[margin=2.35cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{福建省用电结构转型与解释型预测研究}
+\rhead{研究过程主文档}
+\cfoot{\thepage}
+
+\setlist[itemize]{leftmargin=2em,itemsep=0.25em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.25em}
+\renewcommand{\arraystretch}{1.25}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.7em}{}
+
+\newcommand{\projectdate}{2026年5月7日}
+\newcommand{\todo}[1]{\textcolor{red!70!black}{#1}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\manu}{\mathrm{manu}}
+\newcommand{\heavy}{\mathrm{heavy}}
+\newcommand{\adv}{\mathrm{adv}}
+
+\title{\heiti 福建省用电结构转型与解释型预测研究\\
+\large 研究过程主文档：目标、路线、方法与阶段一数据处理结果}
+\author{大创项目研究组}
+\date{\projectdate}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{文档定位。}这不是最终论文，而是写给研究者自己看的全过程说明书。以后每推进一步，本文件都要记录：我们做了什么、为什么这样做、公式怎么来、结果是什么、结果说明什么、下一步准备做什么。最终论文可以从本文件中提炼，但本文件优先保证“看得懂”和“可追溯”。
+}}
+\end{center}
+
+\tableofcontents
+\newpage
+
+\section{研究开头：当前研究目标}
+
+本项目的实证对象是福建省日度用电数据。当前主数据为：
+\begin{itemize}
+  \item \texttt{分行业\&分用电类别(1).csv}：包含分行业、分用电类别的日度数据，是本研究的主数据。
+  \item \texttt{福建全省用电量统计20230101至20260109.xlsx}：包含全省和地市层面的宽表数据，作为辅助核对和展示数据。
+\end{itemize}
+
+本项目不是只回答“未来用电量是多少”。更核心的问题是：
+
+\begin{quote}
+福建省用电变化背后的结构来源是什么？制造业内部是否存在可观测的用电结构转型信号？哪些行业的用电变化能够作为未来制造业或全社会用电变化的前置信号？这些结构信息能否提升预测，并让预测结果更容易解释？
+\end{quote}
+
+因此，本研究希望形成一套面向省域产业运行监测的分析框架：
+
+\begin{enumerate}
+  \item 用闭合口径解释全社会用电总量。
+  \item 用制造业31类细分行业观察制造业内部结构变化。
+  \item 构造用电结构转型指标，判断是否存在稳定的结构转换信号。
+  \item 识别前置信号行业，判断哪些行业对未来总量或制造业变化有预测领先信息。
+  \item 将结构变量、转型指标和前置信号纳入预测模型，形成解释型预测。
+  \item 最终形成研究报告、论文草稿、可复现实验代码、图表和可展示原型。
+\end{enumerate}
+
+\section{研究开头：为什么不能一上来就做复杂预测模型}
+
+如果直接使用机器学习或时间序列模型预测总用电量，可能会得到一个误差指标，但它很难回答以下问题：
+
+\begin{itemize}
+  \item 预测值为什么会上升或下降？
+  \item 变化主要来自第二产业、第三产业还是居民生活？
+  \item 制造业内部是传统高耗能行业在变化，还是装备制造、电子信息、医药等行业在变化？
+  \item 哪些行业先变化，哪些行业后变化？
+  \item 这些行业信号加入模型后，是否真的提高了预测表现？
+\end{itemize}
+
+所以本研究的第一步不是追求复杂模型，而是先验证研究对象本身是否成立。也就是说，先检查：
+
+\begin{quote}
+“用电结构转型”在数据中是否可以作为一个可观测、可度量、可解释的研究对象。
+\end{quote}
+
+如果这个信号不存在或非常弱，后续就不能硬把它写成主创新；如果它存在且较稳定，再继续做前置信号网络和解释型预测才有意义。
+
+\section{研究开头：总体技术路线}
+
+本研究暂定为七个阶段。
+
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.45\linewidth}}
+\toprule
+阶段 & 要做什么 & 这一阶段解决的问题 \\
+\midrule
+一 & 数据整理与闭合验证 & 数据能不能严肃使用？总量是否能由结构项闭合解释？制造业是否能由31类细分行业闭合解释？\\
+二 & 总量结构分解 & 全社会用电变化来自第一产业、第二产业、第三产业还是居民生活？\\
+三 & 制造业行业分组 & 如何把31类制造业行业整理成可解释的产业组？\\
+四 & 结构转型信号预验证 & 制造业内部是否真的存在稳定、明显、可解释的结构变化？\\
+五 & 前置信号行业识别 & 哪些行业历史变化对制造业或全社会用电有预测领先信息？\\
+六 & 解释型预测建模 & 结构变量、转型指标和前置信号能否提升预测，并解释预测来源？\\
+七 & 证据分级与成果表达 & 哪些结论只是描述，哪些是预测领先，哪些有产业解释，哪些不能说成因果？\\
+\bottomrule
+\end{longtable}
+
+这一路线的逻辑是：
+\[
+\text{数据口径清楚}
+\rightarrow
+\text{结构分解可信}
+\rightarrow
+\text{转型信号可验证}
+\rightarrow
+\text{前置信号可筛选}
+\rightarrow
+\text{预测结果可解释}.
+\]
+
+\subsection{详细研究流程图}
+
+为了避免路线只停留在口号层面，图\ref{fig:full-route}把本项目的完整过程拆成八个环节。每个环节都必须回答三个问题：使用什么方法、得到什么结果、这个结果有什么意义。
+
+\begin{figure}[htbp]
+\centering
+\small
+\begin{tikzpicture}[
+  node distance=0.72cm,
+  flowstep/.style={
+    rectangle,
+    rounded corners,
+    draw=blue!55!black,
+    fill=blue!4,
+    text width=0.86\linewidth,
+    align=left,
+    inner sep=6pt
+  },
+  arrow/.style={-{Stealth[length=2.2mm]}, thick, draw=blue!65!black}
+]
+\node[flowstep] (s1) {\textbf{1. 数据口径审计}\\检查原始CSV和Excel分别是什么口径，确认主数据、辅助数据和不能混用的部分。};
+\node[flowstep, below=of s1] (s2) {\textbf{2. 闭合验证}\\验证全社会总量是否等于四大结构项之和，制造业是否等于31类细分行业之和。};
+\node[flowstep, below=of s2] (s3) {\textbf{3. 总量结构分解}\\计算一二三产、居民生活和制造业占比，以及它们对新增用电的贡献。};
+\node[flowstep, below=of s3] (s4) {\textbf{4. 制造业行业分组}\\将31类制造业行业分成传统高耗能、轻工消费、装备制造、先进制造和其他制造。};
+\node[flowstep, below=of s4] (s5) {\textbf{5. 结构转型信号预验证}\\计算分组占比、转型差值、转型比值和增长贡献，判断结构转型信号是否真实存在。};
+\node[flowstep, below=of s5] (s6) {\textbf{6. 前置信号行业识别}\\用滞后相关、Granger/滞后回归、滚动窗口和预测增益筛选领先行业。};
+\node[flowstep, below=of s6] (s7) {\textbf{7. 解释型预测}\\比较总量自身模型、结构增强模型、转型指标增强模型和前置信号增强模型。};
+\node[flowstep, below=of s7] (s8) {\textbf{8. 证据分级与成果输出}\\把结论分成描述事实、结构信号、预测领先、预测贡献和产业解释，形成报告、论文和原型。};
+\draw[arrow] (s1) -- (s2);
+\draw[arrow] (s2) -- (s3);
+\draw[arrow] (s3) -- (s4);
+\draw[arrow] (s4) -- (s5);
+\draw[arrow] (s5) -- (s6);
+\draw[arrow] (s6) -- (s7);
+\draw[arrow] (s7) -- (s8);
+\end{tikzpicture}
+\caption{本项目详细研究流程图}
+\label{fig:full-route}
+\end{figure}
+
+\subsection{每一步使用的方法、得到的结果和结果意义}
+
+表\ref{tab:route-method-result}进一步说明每个环节的操作方法、产出结果和解释意义。后续每一阶段完成后，都要回到这张表中对应的环节，把“计划中的结果”替换成“实际得到的结果”。
+
+\begin{longtable}{p{0.13\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.25\linewidth}}
+\caption{研究流程、方法、结果和意义对照表}
+\label{tab:route-method-result}\\
+\toprule
+环节 & 方法 & 结果 & 意义 \\
+\midrule
+\endfirsthead
+\toprule
+环节 & 方法 & 结果 & 意义 \\
+\midrule
+\endhead
+数据口径审计 &
+读取CSV和Excel的字段、日期范围、行列结构和统计口径；区分用电/售电、全省/地市、完整分类/重点行业列。 &
+得到主数据和辅助数据的分工：CSV作为结构主数据，Excel作为辅助核对和展示。 &
+避免把不同统计口径混合，保证研究不是从错误数据拼接开始。\\
+\midrule
+闭合验证 &
+计算总量闭合误差
+$\Delta^{\mathrm{total}}_t$和制造业闭合误差$\Delta^{\manu}_t$，并检查相对误差。 &
+若误差接近0，说明总量和制造业内部结构可以被加总解释。 &
+这是后续结构分析的合法性基础；如果闭合失败，就不能继续解释结构。\\
+\midrule
+总量结构分解 &
+计算结构占比$S_{k,t}=E_{k,t}/E_{\mathrm{total},t}$和增长贡献$C_k=\Delta E_k/\Delta E_{\mathrm{total}}$。 &
+得到一二三产、居民生活和制造业的占比、趋势和新增贡献。 &
+回答“福建用电变化主要来自哪里”，为后续制造业研究提供背景。\\
+\midrule
+制造业行业分组 &
+结合行业名称、国民经济行业分类含义和福建产业背景，把31类制造业分为若干产业组。 &
+得到制造业分组表和每个分组的日度用电序列。 &
+把零散行业变成可解释的产业结构，避免只做杂乱行业排名。\\
+\midrule
+结构转型信号预验证 &
+计算分组占比、结构转型差值$T_t=S_{\adv,t}-S_{\heavy,t}$、结构转型比值$R_t=E_{\adv,t}/E_{\heavy,t}$和增长贡献。 &
+得到结构转型指标趋势图、分组占比图和增长贡献象限图。 &
+判断“用电结构转型”是否真的能作为本项目的核心研究对象。\\
+\midrule
+前置信号行业识别 &
+使用滞后相关、Granger检验或滞后回归、滚动窗口稳定性和预测误差增益检验。 &
+得到前置信号行业清单、领先期分布和稳定性表。 &
+回答哪些行业的历史变化能够提前提示制造业或总用电变化。\\
+\midrule
+解释型预测 &
+比较总量自身模型、结构增强模型、转型指标增强模型和前置信号增强模型；使用滚动窗口回测。 &
+得到MAE、RMSE、SMAPE、方向准确率和误差分解。 &
+不只看预测准不准，还看结构信息是否真的帮助预测、如何帮助预测。\\
+\midrule
+证据分级与成果输出 &
+把每条结论标为E0至E5：描述事实、结构信号、时序领先、稳健前置信号、预测贡献、产业解释。 &
+得到可写入论文和答辩的结论边界表。 &
+防止把相关、预测领先或Granger结果误写成强因果，保证项目严谨可信。\\
+\bottomrule
+\end{longtable}
+
+\subsection{如何阅读后续每个结果}
+
+本项目后续每个结果都要按下面的格式解释：
+
+\begin{enumerate}
+  \item \textbf{这个结果从哪里来：}说明使用哪个数据表、哪个字段、哪个时间范围。
+  \item \textbf{公式是什么：}写出计算公式，并解释公式中每个符号的含义。
+  \item \textbf{数值结果是什么：}给出表格、图或关键统计量。
+  \item \textbf{它说明什么：}解释它支持哪一个研究判断。
+  \item \textbf{它不能说明什么：}说明结论边界，特别是不把预测领先写成强因果。
+  \item \textbf{下一步是什么：}说明这个结果如何决定后续分析路线。
+\end{enumerate}
+
+\section{第一阶段：数据整理与闭合验证}
+
+\subsection{为什么要做闭合验证}
+
+所谓闭合验证，就是检查一个总量是否能由若干组成部分加总得到。它的意义是防止我们把不同口径的数据乱加在一起。
+
+本项目已经发现一个重要事实：Excel文件中的若干重点行业列只能覆盖全社会总量的一部分，不能直接当作完整行业体系。相比之下，CSV文件中存在较完整的分类结构，因此后续主线必须以CSV为主。
+
+\subsection{总量闭合关系}
+
+对全社会用电总计，预期闭合关系为：
+\[
+E_{\mathrm{total},t}
+=
+E_{\mathrm{primary},t}
++
+E_{\mathrm{secondary},t}
++
+E_{\mathrm{tertiary},t}
++
+E_{\mathrm{residential},t}.
+\]
+
+其中：
+\begin{itemize}
+  \item $E_{\mathrm{total},t}$ 表示第$t$天全社会用电总计；
+  \item $E_{\mathrm{primary},t}$ 表示第一产业用电；
+  \item $E_{\mathrm{secondary},t}$ 表示第二产业用电；
+  \item $E_{\mathrm{tertiary},t}$ 表示第三产业用电；
+  \item $E_{\mathrm{residential},t}$ 表示城乡居民生活用电合计。
+\end{itemize}
+
+我们要计算闭合误差：
+\[
+\Delta^{\mathrm{total}}_t
+=
+E_{\mathrm{total},t}
+-
+\left(
+E_{\mathrm{primary},t}
++
+E_{\mathrm{secondary},t}
++
+E_{\mathrm{tertiary},t}
++
+E_{\mathrm{residential},t}
+\right).
+\]
+
+如果$\Delta^{\mathrm{total}}_t$接近0，说明这个口径可以用来解释总量。如果误差很大，就必须先找出原因，不能继续建模。
+
+\subsection{制造业闭合关系}
+
+对制造业，预期闭合关系为：
+\[
+E_{\manu,t}
+=
+\sum_{i=1}^{31} E_{i,t},
+\]
+其中$E_{\manu,t}$表示第$t$天制造业总用电量，$E_{i,t}$表示第$i$个制造业细分行业的用电量。
+
+对应闭合误差为：
+\[
+\Delta^{\manu}_t
+=
+E_{\manu,t}
+-
+\sum_{i=1}^{31} E_{i,t}.
+\]
+
+这一关系很关键。只有制造业可以被31类细分行业基本闭合解释，我们才有资格继续分析制造业内部结构。
+
+\subsection{本轮实际处理了什么}
+
+本轮使用脚本\texttt{Experiments/scripts/fujian\_structure\_stage1.py}重新处理CSV主数据。处理时只保留最适合本研究主线的全省用电口径：
+\[
+\text{类型}=\text{用电},\qquad
+\text{汇总方式}=\text{按地市汇总},\qquad
+\text{单位名称}=\text{全省}.
+\]
+
+这样做的原因是：本阶段要研究福建省整体结构，而不是先研究地市差异；同时我们要使用“用电”口径，而不是“售电”口径，避免两个统计口径混用。
+
+脚本完成了四件事：
+\begin{enumerate}
+  \item 将CSV宽表转为长表。原表中每一天是一列，不利于后续建模；长表把每一行整理成“日期--行业--电量”的形式。
+  \item 生成全省日度宽表。宽表用于闭合验证、结构占比、制造业分组和后续建模。
+  \item 生成行业字典。记录每个行业名称、行业代码、行号和是否进入制造业分组。
+  \item 计算总量闭合和制造业闭合误差。
+\end{enumerate}
+
+本轮生成的核心文件如下：
+
+\begin{longtable}{p{0.28\linewidth}p{0.55\linewidth}}
+\toprule
+输出类别 & 作用 \\
+\midrule
+全省用电日度长表 & 后续结构分析和建模的主数据之一，每行对应一个日期、一个行业或类别和一个电量值。\\
+全省用电日度宽表 & 适合直接取总量、四大结构项、制造业总量和制造业细分项。\\
+全省口径行业字典 & 记录67个行业/类别的原始名称、清洗后名称、代码和行号。\\
+制造业行业分组表 & 将31个制造业细分行业映射到传统高耗能、轻工消费、装备制造、先进制造和其他制造。\\
+总量闭合每日误差表 & 检查全社会用电总计是否等于第一产业、第二产业、第三产业和居民生活之和。\\
+制造业闭合每日误差表 & 检查制造业总量是否等于31个制造业细分行业之和。\\
+年度结构占比表 & 给出年度一二三产、居民生活和制造业占全社会用电量的比例。\\
+\bottomrule
+\end{longtable}
+
+这些文件统一保存在\texttt{structure\_stage1}子目录下：处理后数据在\texttt{Data/processed/}，字典在\texttt{Data/dictionary/}，计算结果在\texttt{Experiments/outputs/}。
+
+\subsection{本轮数据处理结果}
+
+本轮从CSV中抽取到：
+\begin{itemize}
+  \item 日期范围：2022年1月1日至2026年1月10日；
+  \item 日期列数：1471列；
+  \item 全省用电口径下的行业/类别行数：67行；
+  \item 转换后的长表行数：98557行；
+  \item 预期制造业细分行业数：31个；
+  \item 实际找到的制造业细分行业数：31个。
+\end{itemize}
+
+这说明第一阶段最重要的数据条件成立：CSV中不仅有全社会总量和四大结构项，也有完整的制造业31类细分行业。
+
+\subsection{闭合验证结果}
+
+表\ref{tab:stage1-closure}给出两个闭合验证的结果。
+
+\begin{table}[htbp]
+\centering
+\caption{阶段一闭合验证摘要}
+\label{tab:stage1-closure}
+\resizebox{\linewidth}{!}{\input{tables/stage1_closure_summary.tex}}
+\end{table}
+
+这个结果说明：
+\begin{itemize}
+  \item 全社会总量闭合的平均相对绝对误差约为$7.42\times10^{-11}$，可以视为数值舍入误差。
+  \item 制造业31类闭合的平均相对绝对误差约为$1.37\times10^{-9}$，也可以视为数值舍入误差。
+  \item 因此，后续可以严肃使用这两个闭合关系：一是全社会总量由第一产业、第二产业、第三产业和居民生活解释；二是制造业由31类制造业细分行业解释。
+\end{itemize}
+
+这里要注意，闭合验证只证明“统计口径上可以加总解释”，不证明经济因果关系。它的作用是给后续结构分析提供可信数据地基。
+
+\subsection{第一阶段结论}
+
+第一阶段结论是：
+
+\begin{quote}
+福建CSV主数据在“用电--按地市汇总--全省”口径下具有很好的闭合性。全社会用电总计可以由四大结构项闭合解释，制造业可以由31个细分行业闭合解释。因此，本项目有资格进入总量结构分解和制造业结构转型信号预验证。
+\end{quote}
+
+下一阶段要做的是总量结构分解。它不是最终创新点，但它会回答一个基础问题：福建全社会用电量中，第二产业、第三产业、居民生活和制造业分别处在什么位置。
+
+\section{第二阶段：总量结构分解}
+
+总量结构分解不是本项目的核心创新，但它是研究地基。
+
+定义第$k$类结构在第$t$天的用电占比为：
+\[
+S_{k,t}
+=
+\frac{E_{k,t}}{E_{\mathrm{total},t}},
+\]
+其中$k$可以是第一产业、第二产业、第三产业或居民生活。
+
+这个指标回答：
+
+\begin{quote}
+全社会总用电中，每一类结构占多少？
+\end{quote}
+
+但占比只描述存量。为了看“谁贡献新增量”，还要计算增长贡献。设从时期0到时期1，第$k$类用电变化为
+\[
+\Delta E_k=E_{k,1}-E_{k,0},
+\]
+全社会总用电变化为
+\[
+\Delta E_{\mathrm{total}}=E_{\mathrm{total},1}-E_{\mathrm{total},0}.
+\]
+则第$k$类对总量增长的贡献率为：
+\[
+C_k
+=
+\frac{\Delta E_k}{\Delta E_{\mathrm{total}}}.
+\]
+
+如果$C_k$较高，说明该类结构对新增用电贡献大；如果$S_{k,t}$很高但$C_k$不高，说明它更像存量基础，而不是新增动力。
+
+\subsection{阶段一已经得到的年度结构初表}
+
+虽然总量结构分解会在第二阶段正式展开，但第一阶段已经先计算出年度结构占比，用于判断数据是否合理。表\ref{tab:stage1-annual-share}显示：2022年至2025年，第二产业占全社会用电量约59\%，制造业占全社会用电量约54\%。这说明制造业确实是福建用电结构中的核心部分，后续研究制造业内部结构变化不是随意选择。
+
+\begin{table}[htbp]
+\centering
+\caption{阶段一年度结构占比初表}
+\label{tab:stage1-annual-share}
+\resizebox{\linewidth}{!}{\input{tables/stage1_annual_structure_shares.tex}}
+\end{table}
+
+这张表目前只作为“进入第二阶段的入口结果”。真正的解释还不能停留在年度占比上，后续还要做月度/日度结构变化、制造业分组占比和增长贡献分析。
+
+\section{第三阶段：制造业结构转型信号预验证}
+
+\subsection{这一步到底要证明什么}
+
+这里的“证明”不是数学定理证明，也不是证明福建产业已经升级。我们要证明的是更谨慎的命题：
+
+\begin{quote}
+制造业内部不同类型行业的用电占比、增长贡献和变化方向，是否存在稳定、明显、可解释的结构变化。
+\end{quote}
+
+如果这个命题成立，后续可以继续研究“前置信号网络”和“解释型预测”。如果不成立，就说明结构转型不能作为主创新，只能作为探索性分析。
+
+\subsection{制造业分组}
+
+初步把制造业31类行业分成五组：
+
+\begin{longtable}{p{0.22\linewidth}p{0.62\linewidth}}
+\toprule
+组别 & 含义 \\
+\midrule
+传统高耗能与材料行业 & 黑色金属、有色金属、非金属矿物、化学原料、石油煤炭加工、化学纤维等。\\
+消费与轻工制造 & 食品、饮料茶、纺织、服装、皮革、家具、造纸、印刷等。\\
+装备制造 & 金属制品、通用设备、专用设备、汽车、运输设备、电气机械等。\\
+先进制造与技术相关行业 & 计算机通信电子、仪器仪表、医药制造等。\\
+其他制造 & 其他制造、废弃资源综合利用、设备修理等。\\
+\bottomrule
+\end{longtable}
+
+注意：这个分组不是绝对真理。后续必须用国民经济行业分类、福建产业政策资料和数据表现共同修订。
+
+\subsection{结构转型指标}
+
+设第$g$个制造业分组在第$t$天的用电量为$E_{g,t}$，制造业总用电量为$E_{\manu,t}$，则分组占比为：
+\[
+S_{g,t}
+=
+\frac{E_{g,t}}{E_{\manu,t}}.
+\]
+
+传统高耗能与材料组占比记为$S_{\heavy,t}$，装备与先进制造组占比记为$S_{\adv,t}$。定义结构转型差值：
+\[
+T_t
+=
+S_{\adv,t}
+-
+S_{\heavy,t}.
+\]
+
+如果$T_t$上升，说明装备与先进制造用电占比相对传统高耗能与材料行业增强；如果$T_t$下降，则说明传统高耗能与材料行业相对更强。
+
+还可以定义结构转型比值：
+\[
+R_t
+=
+\frac{E_{\adv,t}}{E_{\heavy,t}}.
+\]
+
+$R_t$表示装备与先进制造用电量相对于传统高耗能与材料行业用电量的强弱。它和$T_t$类似，但更强调二者的比例关系。
+
+\subsection{预验证通过标准}
+
+在进入前置信号网络之前，至少要检查四个标准：
+
+\begin{enumerate}
+  \item 至少一个制造业分组占比在年度或月度尺度上出现可解释变化。
+  \item $T_t$或$R_t$不是完全围绕固定水平随机摆动。
+  \item 增长贡献能够识别出若干高占比高增长、低占比高增长或高占比低增长的行业。
+  \item 换成周度、月度或滚动窗口后，核心判断不完全反转。
+\end{enumerate}
+
+如果以上标准较好满足，则进入前置信号网络；如果不满足，就必须降级研究主线，不能硬写“结构转型创新”。
+
+\section{第四阶段：前置信号行业识别}
+
+前置信号行业不是指“真正因果上导致总用电变化”的行业，而是指：
+
+\begin{quote}
+某行业的历史用电变化，对目标变量未来变化具有稳定预测领先信息。
+\end{quote}
+
+一个基础检验可以写成滞后回归：
+\[
+y_t
+=
+\alpha
++
+\sum_{\ell=1}^{p}\phi_{\ell}y_{t-\ell}
++
+\sum_{\ell=1}^{p}\beta_{\ell}x_{i,t-\ell}
++
+\varepsilon_t.
+\]
+
+其中：
+\begin{itemize}
+  \item $y_t$是目标变量，例如制造业总用电量或全社会用电总计；
+  \item $x_{i,t-\ell}$是第$i$个行业滞后$\ell$期的用电量或增长率；
+  \item $\phi_{\ell}$表示目标变量自身历史的影响；
+  \item $\beta_{\ell}$表示行业$i$的滞后信息是否能帮助解释或预测$y_t$；
+  \item $\varepsilon_t$是模型没有解释掉的误差。
+\end{itemize}
+
+如果若干$\beta_{\ell}$整体显著，并且加入$x_i$后滚动预测误差下降，那么行业$i$可以被视为候选前置信号行业。
+
+为了避免只靠一次显著性检验，本项目要求前置信号至少从四个角度评价：
+\begin{enumerate}
+  \item 领先显著性：滞后项或Granger检验是否支持预测领先。
+  \item 稳定性：换窗口、换滞后阶数后是否仍存在。
+  \item 预测增益：加入该行业后MAE、RMSE或SMAPE是否下降。
+  \item 产业解释：该行业与目标变量之间是否有产业链或经济逻辑支持。
+\end{enumerate}
+
+\section{第五阶段：解释型预测}
+
+普通预测只关心误差。本项目的预测还要解释“为什么这样预测”。
+
+我们将比较四类模型：
+
+\begin{longtable}{p{0.25\linewidth}p{0.35\linewidth}p{0.28\linewidth}}
+\toprule
+模型 & 输入变量 & 目的 \\
+\midrule
+总量自身模型 & 目标变量自身历史 & 作为最低预测基线。\\
+结构增强模型 & 总量历史 + 一二三产和居民生活结构变量 & 检验完整结构分解是否有预测价值。\\
+转型指标增强模型 & 总量历史 + 制造业结构转型指标 & 检验结构转换信号是否有预测价值。\\
+前置信号增强模型 & 总量历史 + 筛选出的前置信号行业 & 检验行业领先信息是否有预测价值。\\
+\bottomrule
+\end{longtable}
+
+预测评价采用滚动窗口回测，至少报告：
+\[
+\mathrm{MAE}
+=
+\frac{1}{n}\sum_{t=1}^{n}|y_t-\hat{y}_t|,
+\]
+\[
+\mathrm{RMSE}
+=
+\sqrt{\frac{1}{n}\sum_{t=1}^{n}(y_t-\hat{y}_t)^2},
+\]
+\[
+\mathrm{SMAPE}
+=
+\frac{100\%}{n}
+\sum_{t=1}^{n}
+\frac{2|y_t-\hat{y}_t|}{|y_t|+|\hat{y}_t|}.
+\]
+
+其中$y_t$是真实值，$\hat{y}_t$是预测值。MAE看平均绝对误差，RMSE对大误差更敏感，SMAPE适合用百分比形式比较不同规模序列。
+
+\section{证据边界}
+
+本项目必须避免把预测领先写成强因果。当前证据分级如下：
+
+\begin{longtable}{p{0.16\linewidth}p{0.34\linewidth}p{0.34\linewidth}}
+\toprule
+等级 & 证据含义 & 允许写法 \\
+\midrule
+E0 & 描述事实，例如占比、趋势和增长率。 & 某行业占比上升，某结构贡献增加。\\
+E1 & 结构转型信号，例如分组占比和转型指标变化。 & 用电侧出现结构转换信号。\\
+E2 & 时序领先证据，例如滞后项显著或Granger成立。 & 某行业对目标变量有预测领先信息。\\
+E3 & 稳健前置信号，例如滚动窗口和不同滞后下仍有效。 & 某行业是较稳定的前置信号。\\
+E4 & 预测贡献，例如加入该变量后误差下降。 & 某行业信号对预测有实际贡献。\\
+E5 & 产业解释支持，例如产业链或政策材料支持。 & 该领先关系具有产业结构解释。\\
+\bottomrule
+\end{longtable}
+
+除非后续找到明确政策冲击、对照组或准实验设计，否则本项目不写强因果结论。
+
+\section{当前已经确定的下一步}
+
+下一步只做第一批可验证结果，不急着写最终论文结论。
+
+\begin{enumerate}
+  \item 从CSV生成干净长表，保留日期、口径、汇总方式、地区、行业名称、用电量等字段。
+  \item 完成全社会用电总计闭合验证和制造业31类闭合验证。
+  \item 建立制造业31类行业分组表。
+  \item 计算制造业分组占比、结构转型差值、结构转型比值和增长贡献率。
+  \item 输出第一批图表：分组占比趋势、结构转型指标趋势、增长贡献象限图。
+  \item 根据预验证结果决定是否进入前置信号网络。
+\end{enumerate}
+
+\section{文档收敛规则}
+
+后续给研究者阅读的主入口只有本PDF。其余文件的角色如下：
+
+\begin{itemize}
+  \item 原始数据、原始资料、PDF文献：保留，不删除，不直接修改。
+  \item 代码、处理后数据、图表：作为可复现支撑材料保留。
+  \item 旧计划书和旧报告：不再作为主入口，只作为历史记录；后续可以在确认后归档或删除重复版本。
+  \item 本文档：持续更新，记录所有关键过程、公式、结果和下一步。
+\end{itemize}
+
+计划书目录里现在确实有多个版本。建议后续只保留最新版计划书和国家级大创对标文档作为方法来源，其余旧版计划书可以归档到\texttt{Archive/旧计划书/}。由于归档或删除属于批量整理，执行前需要先确认具体文件清单。
+
+\end{document}

@@ -1,0 +1,14 @@
+{
+  "source_csv": "D:\\ai\\数学ai\\Projects\\InnovationProjects\\福建用电量预测与产业因果推断研究\\Sources\\原始数据\\分行业&分用电类别(1).csv",
+  "date_start": "2022-01-01",
+  "date_end": "2026-01-10",
+  "province_rows": 67,
+  "date_columns": 1471,
+  "long_rows": 98557,
+  "industry_names": 67,
+  "manufacturing_expected_industries": 31,
+  "manufacturing_present_industries": 31,
+  "manufacturing_missing_industries": [],
+  "total_closure_mean_relative_abs_error": 7.422359850720174e-11,
+  "manufacturing_closure_mean_relative_abs_error": 1.3661239582505987e-09
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="476" viewBox="0 0 980 476">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">2025 年地市对全省用电增长贡献</text>
+<line x1="545.0" y1="47" x2="545.0" y2="451" stroke="#475569" stroke-width="1"/>
+<text x="170" y="73" text-anchor="end" font-size="13" font-family="Arial">福州</text>
+<rect x="545.0" y="55" width="365.0" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="916.0" y="72" text-anchor="start" font-size="12" font-family="Arial">23.6%</text>
+<text x="170" y="117" text-anchor="end" font-size="13" font-family="Arial">宁德</text>
+<rect x="545.0" y="99" width="348.7629965498339" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="899.7629965498338" y="116" text-anchor="start" font-size="12" font-family="Arial">22.6%</text>
+<text x="170" y="161" text-anchor="end" font-size="13" font-family="Arial">厦门</text>
+<rect x="545.0" y="143" width="261.6716473620169" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="812.671647362017" y="160" text-anchor="start" font-size="12" font-family="Arial">16.9%</text>
+<text x="170" y="205" text-anchor="end" font-size="13" font-family="Arial">泉州</text>
+<rect x="545.0" y="187" width="244.22109773757376" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="795.2210977375737" y="204" text-anchor="start" font-size="12" font-family="Arial">15.8%</text>
+<text x="170" y="249" text-anchor="end" font-size="13" font-family="Arial">莆田</text>
+<rect x="545.0" y="231" width="103.19364547213077" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="654.1936454721308" y="248" text-anchor="start" font-size="12" font-family="Arial">6.7%</text>
+<text x="170" y="293" text-anchor="end" font-size="13" font-family="Arial">漳州</text>
+<rect x="545.0" y="275" width="85.85794979837475" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="636.8579497983748" y="292" text-anchor="start" font-size="12" font-family="Arial">5.6%</text>
+<text x="170" y="337" text-anchor="end" font-size="13" font-family="Arial">南平</text>
+<rect x="545.0" y="319" width="60.65386952369126" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="611.6538695236912" y="336" text-anchor="start" font-size="12" font-family="Arial">3.9%</text>
+<text x="170" y="381" text-anchor="end" font-size="13" font-family="Arial">龙岩</text>
+<rect x="545.0" y="363" width="56.35489057049611" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="607.3548905704961" y="380" text-anchor="start" font-size="12" font-family="Arial">3.6%</text>
+<text x="170" y="425" text-anchor="end" font-size="13" font-family="Arial">三明</text>
+<rect x="545.0" y="407" width="20.769914714862622" height="24" fill="#2563eb" opacity="0.85"/>
+<text x="571.7699147148626" y="424" text-anchor="start" font-size="12" font-family="Arial">1.3%</text>
+</svg>

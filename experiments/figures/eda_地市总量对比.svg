@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">2023-2025 福建各地市用电量对比</text>
+<text x="200" y="75.4" text-anchor="end" font-size="12" font-family="Arial">南平</text>
+<rect x="210" y="55.0" width="159.8975861332655" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="375.89758613326546" y="75.4" font-size="11" font-family="Arial">411.8亿</text>
+<text x="200" y="124.15" text-anchor="end" font-size="12" font-family="Arial">龙岩</text>
+<rect x="210" y="103.75" width="166.47303842772035" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="382.4730384277203" y="124.15" font-size="11" font-family="Arial">428.7亿</text>
+<text x="200" y="172.9" text-anchor="end" font-size="12" font-family="Arial">莆田</text>
+<rect x="210" y="152.5" width="174.583621855472" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="390.58362185547196" y="172.9" font-size="11" font-family="Arial">449.6亿</text>
+<text x="200" y="221.65" text-anchor="end" font-size="12" font-family="Arial">三明</text>
+<rect x="210" y="201.25" width="180.32072955935456" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="396.32072955935456" y="221.65" font-size="11" font-family="Arial">464.4亿</text>
+<text x="200" y="270.4" text-anchor="end" font-size="12" font-family="Arial">漳州</text>
+<rect x="210" y="250.0" width="382.58257107511304" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="598.582571075113" y="270.4" font-size="11" font-family="Arial">985.2亿</text>
+<text x="200" y="319.15" text-anchor="end" font-size="12" font-family="Arial">宁德</text>
+<rect x="210" y="298.75" width="389.2964584197007" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="605.2964584197007" y="319.15" font-size="11" font-family="Arial">1002.5亿</text>
+<text x="200" y="367.9" text-anchor="end" font-size="12" font-family="Arial">厦门</text>
+<rect x="210" y="347.5" width="450.045310217065" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="666.045310217065" y="367.9" font-size="11" font-family="Arial">1158.9亿</text>
+<text x="200" y="416.65" text-anchor="end" font-size="12" font-family="Arial">泉州</text>
+<rect x="210" y="396.25" width="710.7391710162718" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="926.7391710162718" y="416.65" font-size="11" font-family="Arial">1830.3亿</text>
+<text x="200" y="465.4" text-anchor="end" font-size="12" font-family="Arial">福州</text>
+<rect x="210" y="445.0" width="730.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="946.0" y="465.4" font-size="11" font-family="Arial">1879.9亿</text>
+</svg>

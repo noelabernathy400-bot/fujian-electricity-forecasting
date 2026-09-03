@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">福建全省合计用电的星期效应</text>
+<text x="200" y="75.4" text-anchor="end" font-size="12" font-family="Arial">周一</text>
+<rect x="210" y="55.0" width="726.0563409296683" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="942.0563409296683" y="75.4" font-size="11" font-family="Arial">7.9亿</text>
+<text x="200" y="140.4" text-anchor="end" font-size="12" font-family="Arial">周二</text>
+<rect x="210" y="120.0" width="730.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="946.0" y="140.4" font-size="11" font-family="Arial">7.9亿</text>
+<text x="200" y="205.4" text-anchor="end" font-size="12" font-family="Arial">周三</text>
+<rect x="210" y="185.0" width="728.0019016371311" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="944.0019016371311" y="205.4" font-size="11" font-family="Arial">7.9亿</text>
+<text x="200" y="270.4" text-anchor="end" font-size="12" font-family="Arial">周四</text>
+<rect x="210" y="250.0" width="728.7683760436763" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="944.7683760436763" y="270.4" font-size="11" font-family="Arial">7.9亿</text>
+<text x="200" y="335.4" text-anchor="end" font-size="12" font-family="Arial">周五</text>
+<rect x="210" y="315.0" width="729.7654594232869" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="945.7654594232869" y="335.4" font-size="11" font-family="Arial">7.9亿</text>
+<text x="200" y="400.4" text-anchor="end" font-size="12" font-family="Arial">周六</text>
+<rect x="210" y="380.0" width="724.032927518033" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="940.032927518033" y="400.4" font-size="11" font-family="Arial">7.8亿</text>
+<text x="200" y="465.4" text-anchor="end" font-size="12" font-family="Arial">周日</text>
+<rect x="210" y="445.0" width="709.9649494832557" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="925.9649494832557" y="465.4" font-size="11" font-family="Arial">7.7亿</text>
+</svg>

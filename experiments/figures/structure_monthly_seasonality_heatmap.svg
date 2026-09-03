@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="392" viewBox="0 0 1060 392">
+<rect width="100%" height="100%" fill="white"/>
+<text x="530.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">重点变量月度季节性指数</text>
+<text x="181.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">1月</text>
+<text x="243.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">2月</text>
+<text x="305.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">3月</text>
+<text x="367.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">4月</text>
+<text x="429.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">5月</text>
+<text x="491.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">6月</text>
+<text x="553.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">7月</text>
+<text x="615.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">8月</text>
+<text x="677.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">9月</text>
+<text x="739.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">10月</text>
+<text x="801.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">11月</text>
+<text x="863.0" y="51" text-anchor="middle" font-size="12" font-family="Arial">12月</text>
+<text x="140" y="87" text-anchor="end" font-size="13" font-family="Arial">合计</text>
+<rect x="150" y="65" width="60" height="32" fill="rgb(255,132,132)" stroke="white"/>
+<text x="181.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.81</text>
+<rect x="212" y="65" width="60" height="32" fill="rgb(255,124,124)" stroke="white"/>
+<text x="243.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.80</text>
+<rect x="274" y="65" width="60" height="32" fill="rgb(255,191,191)" stroke="white"/>
+<text x="305.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.93</text>
+<rect x="336" y="65" width="60" height="32" fill="rgb(255,196,196)" stroke="white"/>
+<text x="367.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.93</text>
+<rect x="398" y="65" width="60" height="32" fill="rgb(255,210,210)" stroke="white"/>
+<text x="429.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.96</text>
+<rect x="460" y="65" width="60" height="32" fill="rgb(176,176,255)" stroke="white"/>
+<text x="491.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">1.09</text>
+<rect x="522" y="65" width="60" height="32" fill="rgb(132,132,255)" stroke="white"/>
+<text x="553.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">1.18</text>
+<rect x="584" y="65" width="60" height="32" fill="rgb(134,134,255)" stroke="white"/>
+<text x="615.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">1.18</text>
+<rect x="646" y="65" width="60" height="32" fill="rgb(146,146,255)" stroke="white"/>
+<text x="677.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">1.15</text>
+<rect x="708" y="65" width="60" height="32" fill="rgb(213,213,255)" stroke="white"/>
+<text x="739.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">1.01</text>
+<rect x="770" y="65" width="60" height="32" fill="rgb(255,208,208)" stroke="white"/>
+<text x="801.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.96</text>
+<rect x="832" y="65" width="60" height="32" fill="rgb(255,217,217)" stroke="white"/>
+<text x="863.0" y="86" text-anchor="middle" font-size="10" font-family="Arial">0.98</text>
+<text x="140" y="121" text-anchor="end" font-size="13" font-family="Arial">工业</text>
+<rect x="150" y="99" width="60" height="32" fill="rgb(255,111,111)" stroke="white"/>
+<text x="181.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">0.77</text>
+<rect x="212" y="99" width="60" height="32" fill="rgb(255,100,100)" stroke="white"/>
+<text x="243.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">0.75</text>
+<rect x="274" y="99" width="60" height="32" fill="rgb(218,218,255)" stroke="white"/>
+<text x="305.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<rect x="336" y="99" width="60" height="32" fill="rgb(208,208,255)" stroke="white"/>
+<text x="367.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.02</text>
+<rect x="398" y="99" width="60" height="32" fill="rgb(210,210,255)" stroke="white"/>
+<text x="429.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.02</text>
+<rect x="460" y="99" width="60" height="32" fill="rgb(198,198,255)" stroke="white"/>
+<text x="491.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="522" y="99" width="60" height="32" fill="rgb(194,194,255)" stroke="white"/>
+<text x="553.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<rect x="584" y="99" width="60" height="32" fill="rgb(182,182,255)" stroke="white"/>
+<text x="615.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.08</text>
+<rect x="646" y="99" width="60" height="32" fill="rgb(177,177,255)" stroke="white"/>
+<text x="677.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.09</text>
+<rect x="708" y="99" width="60" height="32" fill="rgb(199,199,255)" stroke="white"/>
+<text x="739.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="770" y="99" width="60" height="32" fill="rgb(194,194,255)" stroke="white"/>
+<text x="801.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<rect x="832" y="99" width="60" height="32" fill="rgb(194,194,255)" stroke="white"/>
+<text x="863.0" y="120" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<text x="140" y="155" text-anchor="end" font-size="13" font-family="Arial">制造业</text>
+<rect x="150" y="133" width="60" height="32" fill="rgb(255,100,100)" stroke="white"/>
+<text x="181.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">0.75</text>
+<rect x="212" y="133" width="60" height="32" fill="rgb(255,100,100)" stroke="white"/>
+<text x="243.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">0.73</text>
+<rect x="274" y="133" width="60" height="32" fill="rgb(218,218,255)" stroke="white"/>
+<text x="305.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<rect x="336" y="133" width="60" height="32" fill="rgb(207,207,255)" stroke="white"/>
+<text x="367.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.03</text>
+<rect x="398" y="133" width="60" height="32" fill="rgb(207,207,255)" stroke="white"/>
+<text x="429.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.03</text>
+<rect x="460" y="133" width="60" height="32" fill="rgb(194,194,255)" stroke="white"/>
+<text x="491.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<rect x="522" y="133" width="60" height="32" fill="rgb(189,189,255)" stroke="white"/>
+<text x="553.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.06</text>
+<rect x="584" y="133" width="60" height="32" fill="rgb(176,176,255)" stroke="white"/>
+<text x="615.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.09</text>
+<rect x="646" y="133" width="60" height="32" fill="rgb(177,177,255)" stroke="white"/>
+<text x="677.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.09</text>
+<rect x="708" y="133" width="60" height="32" fill="rgb(198,198,255)" stroke="white"/>
+<text x="739.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="770" y="133" width="60" height="32" fill="rgb(191,191,255)" stroke="white"/>
+<text x="801.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.06</text>
+<rect x="832" y="133" width="60" height="32" fill="rgb(196,196,255)" stroke="white"/>
+<text x="863.0" y="154" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<text x="140" y="189" text-anchor="end" font-size="13" font-family="Arial">大工业电量</text>
+<rect x="150" y="167" width="60" height="32" fill="rgb(255,119,119)" stroke="white"/>
+<text x="181.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">0.79</text>
+<rect x="212" y="167" width="60" height="32" fill="rgb(255,111,111)" stroke="white"/>
+<text x="243.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">0.77</text>
+<rect x="274" y="167" width="60" height="32" fill="rgb(217,217,255)" stroke="white"/>
+<text x="305.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.01</text>
+<rect x="336" y="167" width="60" height="32" fill="rgb(207,207,255)" stroke="white"/>
+<text x="367.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.03</text>
+<rect x="398" y="167" width="60" height="32" fill="rgb(207,207,255)" stroke="white"/>
+<text x="429.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.03</text>
+<rect x="460" y="167" width="60" height="32" fill="rgb(199,199,255)" stroke="white"/>
+<text x="491.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="522" y="167" width="60" height="32" fill="rgb(195,195,255)" stroke="white"/>
+<text x="553.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<rect x="584" y="167" width="60" height="32" fill="rgb(187,187,255)" stroke="white"/>
+<text x="615.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.07</text>
+<rect x="646" y="167" width="60" height="32" fill="rgb(184,184,255)" stroke="white"/>
+<text x="677.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.07</text>
+<rect x="708" y="167" width="60" height="32" fill="rgb(203,203,255)" stroke="white"/>
+<text x="739.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.03</text>
+<rect x="770" y="167" width="60" height="32" fill="rgb(195,195,255)" stroke="white"/>
+<text x="801.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<rect x="832" y="167" width="60" height="32" fill="rgb(197,197,255)" stroke="white"/>
+<text x="863.0" y="188" text-anchor="middle" font-size="10" font-family="Arial">1.05</text>
+<text x="140" y="223" text-anchor="end" font-size="13" font-family="Arial">居民生活</text>
+<rect x="150" y="201" width="60" height="32" fill="rgb(255,187,187)" stroke="white"/>
+<text x="181.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.92</text>
+<rect x="212" y="201" width="60" height="32" fill="rgb(255,178,178)" stroke="white"/>
+<text x="243.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.90</text>
+<rect x="274" y="201" width="60" height="32" fill="rgb(255,138,138)" stroke="white"/>
+<text x="305.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.82</text>
+<rect x="336" y="201" width="60" height="32" fill="rgb(255,118,118)" stroke="white"/>
+<text x="367.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.79</text>
+<rect x="398" y="201" width="60" height="32" fill="rgb(255,142,142)" stroke="white"/>
+<text x="429.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.83</text>
+<rect x="460" y="201" width="60" height="32" fill="rgb(144,144,255)" stroke="white"/>
+<text x="491.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">1.16</text>
+<rect x="522" y="201" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="553.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">1.40</text>
+<rect x="584" y="201" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="615.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">1.33</text>
+<rect x="646" y="201" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="677.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">1.25</text>
+<rect x="708" y="201" width="60" height="32" fill="rgb(255,195,195)" stroke="white"/>
+<text x="739.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.93</text>
+<rect x="770" y="201" width="60" height="32" fill="rgb(255,117,117)" stroke="white"/>
+<text x="801.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.78</text>
+<rect x="832" y="201" width="60" height="32" fill="rgb(255,162,162)" stroke="white"/>
+<text x="863.0" y="222" text-anchor="middle" font-size="10" font-family="Arial">0.87</text>
+<text x="140" y="257" text-anchor="end" font-size="13" font-family="Arial">商业用电</text>
+<rect x="150" y="235" width="60" height="32" fill="rgb(255,101,101)" stroke="white"/>
+<text x="181.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.75</text>
+<rect x="212" y="235" width="60" height="32" fill="rgb(255,101,101)" stroke="white"/>
+<text x="243.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.75</text>
+<rect x="274" y="235" width="60" height="32" fill="rgb(255,114,114)" stroke="white"/>
+<text x="305.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.78</text>
+<rect x="336" y="235" width="60" height="32" fill="rgb(255,140,140)" stroke="white"/>
+<text x="367.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.83</text>
+<rect x="398" y="235" width="60" height="32" fill="rgb(255,202,202)" stroke="white"/>
+<text x="429.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.95</text>
+<rect x="460" y="235" width="60" height="32" fill="rgb(126,126,255)" stroke="white"/>
+<text x="491.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">1.20</text>
+<rect x="522" y="235" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="553.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">1.38</text>
+<rect x="584" y="235" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="615.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">1.36</text>
+<rect x="646" y="235" width="60" height="32" fill="rgb(100,100,255)" stroke="white"/>
+<text x="677.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">1.28</text>
+<rect x="708" y="235" width="60" height="32" fill="rgb(201,201,255)" stroke="white"/>
+<text x="739.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="770" y="235" width="60" height="32" fill="rgb(255,153,153)" stroke="white"/>
+<text x="801.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.85</text>
+<rect x="832" y="235" width="60" height="32" fill="rgb(255,139,139)" stroke="white"/>
+<text x="863.0" y="256" text-anchor="middle" font-size="10" font-family="Arial">0.83</text>
+<text x="140" y="291" text-anchor="end" font-size="13" font-family="Arial">非普工业</text>
+<rect x="150" y="269" width="60" height="32" fill="rgb(255,100,100)" stroke="white"/>
+<text x="181.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">0.74</text>
+<rect x="212" y="269" width="60" height="32" fill="rgb(255,100,100)" stroke="white"/>
+<text x="243.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">0.68</text>
+<rect x="274" y="269" width="60" height="32" fill="rgb(219,219,255)" stroke="white"/>
+<text x="305.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<rect x="336" y="269" width="60" height="32" fill="rgb(212,212,255)" stroke="white"/>
+<text x="367.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.02</text>
+<rect x="398" y="269" width="60" height="32" fill="rgb(219,219,255)" stroke="white"/>
+<text x="429.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<rect x="460" y="269" width="60" height="32" fill="rgb(176,176,255)" stroke="white"/>
+<text x="491.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.09</text>
+<rect x="522" y="269" width="60" height="32" fill="rgb(143,143,255)" stroke="white"/>
+<text x="553.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.16</text>
+<rect x="584" y="269" width="60" height="32" fill="rgb(140,140,255)" stroke="white"/>
+<text x="615.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.17</text>
+<rect x="646" y="269" width="60" height="32" fill="rgb(154,154,255)" stroke="white"/>
+<text x="677.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.14</text>
+<rect x="708" y="269" width="60" height="32" fill="rgb(209,209,255)" stroke="white"/>
+<text x="739.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.02</text>
+<rect x="770" y="269" width="60" height="32" fill="rgb(255,219,219)" stroke="white"/>
+<text x="801.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">0.98</text>
+<rect x="832" y="269" width="60" height="32" fill="rgb(255,228,228)" stroke="white"/>
+<text x="863.0" y="290" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<text x="140" y="325" text-anchor="end" font-size="13" font-family="Arial">电子</text>
+<rect x="150" y="303" width="60" height="32" fill="rgb(255,127,127)" stroke="white"/>
+<text x="181.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">0.80</text>
+<rect x="212" y="303" width="60" height="32" fill="rgb(255,128,128)" stroke="white"/>
+<text x="243.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">0.81</text>
+<rect x="274" y="303" width="60" height="32" fill="rgb(255,193,193)" stroke="white"/>
+<text x="305.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">0.93</text>
+<rect x="336" y="303" width="60" height="32" fill="rgb(255,217,217)" stroke="white"/>
+<text x="367.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">0.98</text>
+<rect x="398" y="303" width="60" height="32" fill="rgb(255,229,229)" stroke="white"/>
+<text x="429.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<rect x="460" y="303" width="60" height="32" fill="rgb(185,185,255)" stroke="white"/>
+<text x="491.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.07</text>
+<rect x="522" y="303" width="60" height="32" fill="rgb(167,167,255)" stroke="white"/>
+<text x="553.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.11</text>
+<rect x="584" y="303" width="60" height="32" fill="rgb(160,160,255)" stroke="white"/>
+<text x="615.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.12</text>
+<rect x="646" y="303" width="60" height="32" fill="rgb(163,163,255)" stroke="white"/>
+<text x="677.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.12</text>
+<rect x="708" y="303" width="60" height="32" fill="rgb(203,203,255)" stroke="white"/>
+<text x="739.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.04</text>
+<rect x="770" y="303" width="60" height="32" fill="rgb(211,211,255)" stroke="white"/>
+<text x="801.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.02</text>
+<rect x="832" y="303" width="60" height="32" fill="rgb(255,229,229)" stroke="white"/>
+<text x="863.0" y="324" text-anchor="middle" font-size="10" font-family="Arial">1.00</text>
+<text x="150" y="374" font-size="12" font-family="Arial">指数大于 1 表示该月日均用电高于全年平均；小于 1 表示低于全年平均。</text>
+</svg>

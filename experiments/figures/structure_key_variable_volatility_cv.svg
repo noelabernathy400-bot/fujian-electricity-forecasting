@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="542" viewBox="0 0 980 542">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">重点变量日度波动强度 CV</text>
+<text x="180" y="73" text-anchor="end" font-size="13" font-family="Arial">居民生活</text>
+<rect x="190" y="55" width="720.0" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="916.0" y="72" font-size="12" font-family="Arial">25.85%</text>
+<text x="180" y="115" text-anchor="end" font-size="13" font-family="Arial">商业用电</text>
+<rect x="190" y="97" width="705.0006836519979" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="901.0006836519979" y="114" font-size="12" font-family="Arial">25.31%</text>
+<text x="180" y="157" text-anchor="end" font-size="13" font-family="Arial">非金属矿物制品业</text>
+<rect x="190" y="139" width="586.3212301774762" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="782.3212301774762" y="156" font-size="12" font-family="Arial">21.05%</text>
+<text x="180" y="199" text-anchor="end" font-size="13" font-family="Arial">非普工业</text>
+<rect x="190" y="181" width="539.6156849135702" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="735.6156849135702" y="198" font-size="12" font-family="Arial">19.37%</text>
+<text x="180" y="241" text-anchor="end" font-size="13" font-family="Arial">黑色金属冶炼</text>
+<rect x="190" y="223" width="486.67182872874383" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="682.6718287287438" y="240" font-size="12" font-family="Arial">17.47%</text>
+<text x="180" y="283" text-anchor="end" font-size="13" font-family="Arial">纺织业</text>
+<rect x="190" y="265" width="476.0220711590276" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="672.0220711590275" y="282" font-size="12" font-family="Arial">17.09%</text>
+<text x="180" y="325" text-anchor="end" font-size="13" font-family="Arial">制造业</text>
+<rect x="190" y="307" width="449.1508659140071" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="645.1508659140071" y="324" font-size="12" font-family="Arial">16.12%</text>
+<text x="180" y="367" text-anchor="end" font-size="13" font-family="Arial">合计</text>
+<rect x="190" y="349" width="429.69174536113616" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="625.6917453611361" y="366" font-size="12" font-family="Arial">15.43%</text>
+<text x="180" y="409" text-anchor="end" font-size="13" font-family="Arial">工业</text>
+<rect x="190" y="391" width="425.2544043185879" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="621.2544043185878" y="408" font-size="12" font-family="Arial">15.27%</text>
+<text x="180" y="451" text-anchor="end" font-size="13" font-family="Arial">电子</text>
+<rect x="190" y="433" width="420.6201710426434" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="616.6201710426434" y="450" font-size="12" font-family="Arial">15.10%</text>
+<text x="180" y="493" text-anchor="end" font-size="13" font-family="Arial">大工业电量</text>
+<rect x="190" y="475" width="398.0044513203693" height="24" fill="#0f766e" opacity="0.85"/>
+<text x="594.0044513203693" y="492" font-size="12" font-family="Arial">14.29%</text>
+</svg>

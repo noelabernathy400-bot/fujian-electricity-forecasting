@@ -1,0 +1,35 @@
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local environments and editor state
+.venv/
+venv/
+.idea/
+.vscode/
+.obsidian/
+
+# Raw and locally derived data that must not be redistributed
+data/raw/
+data/processed/
+Sources/
+*.xlsx
+*.xls
+
+# LaTeX build products
+writing/LaTeX/build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# Local temporary files
+*.tmp
+Thumbs.db
+.DS_Store

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="550.0" y="28" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">全省合计直接多步预测：不同 horizon MAPE</text>
+<rect x="70" y="55" width="1000" height="295" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="70" x2="1070" y1="55.0" y2="55.0" stroke="#e2e8f0"/>
+<text x="62" y="59.0" text-anchor="end" font-size="11" font-family="Arial">6.8%</text>
+<line x1="70" x2="1070" y1="128.75" y2="128.75" stroke="#e2e8f0"/>
+<text x="62" y="132.75" text-anchor="end" font-size="11" font-family="Arial">5.7%</text>
+<line x1="70" x2="1070" y1="202.5" y2="202.5" stroke="#e2e8f0"/>
+<text x="62" y="206.5" text-anchor="end" font-size="11" font-family="Arial">4.5%</text>
+<line x1="70" x2="1070" y1="276.25" y2="276.25" stroke="#e2e8f0"/>
+<text x="62" y="280.25" text-anchor="end" font-size="11" font-family="Arial">3.4%</text>
+<line x1="70" x2="1070" y1="350.0" y2="350.0" stroke="#e2e8f0"/>
+<text x="62" y="354.0" text-anchor="end" font-size="11" font-family="Arial">2.3%</text>
+<text x="70.0" y="385" text-anchor="middle" font-size="11" font-family="Arial">1</text>
+<text x="207.9310344827586" y="385" text-anchor="middle" font-size="11" font-family="Arial">5</text>
+<text x="345.8620689655172" y="385" text-anchor="middle" font-size="11" font-family="Arial">9</text>
+<text x="483.7931034482759" y="385" text-anchor="middle" font-size="11" font-family="Arial">13</text>
+<text x="621.7241379310344" y="385" text-anchor="middle" font-size="11" font-family="Arial">17</text>
+<text x="759.6551724137931" y="385" text-anchor="middle" font-size="11" font-family="Arial">21</text>
+<text x="897.5862068965517" y="385" text-anchor="middle" font-size="11" font-family="Arial">25</text>
+<text x="1070.0" y="385" text-anchor="middle" font-size="11" font-family="Arial">30</text>
+<polyline points="70.0,306.6 104.5,249.2 139.0,202.8 173.4,170.4 207.9,144.0 242.4,120.8 276.9,103.4 311.4,87.7 345.9,78.3 380.3,75.5 414.8,70.4 449.3,65.0 483.8,61.5 518.3,57.3 552.8,55.2 587.2,55.0 621.7,55.4 656.2,59.1 690.7,67.3 725.2,71.3 759.7,76.7 794.1,85.9 828.6,88.8 863.1,88.6 897.6,85.3 932.1,78.8 966.6,72.9 1001.0,66.1 1035.5,63.1 1070.0,62.6" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+<line x1="70" x2="94" y1="404" y2="404" stroke="#2563eb" stroke-width="3"/>
+<text x="100" y="408" font-size="12" font-family="Arial">direct_own_calendar</text>
+<polyline points="70.0,287.9 104.5,247.6 139.0,223.8 173.4,206.2 207.9,196.2 242.4,191.7 276.9,191.7 311.4,191.9 345.9,190.0 380.3,187.5 414.8,185.0 449.3,182.7 483.8,178.7 518.3,169.7 552.8,162.9 587.2,155.4 621.7,148.6 656.2,146.5 690.7,145.3 725.2,143.9 759.7,140.4 794.1,136.6 828.6,133.1 863.1,129.1 897.6,124.1 932.1,116.6 966.6,109.6 1001.0,107.4 1035.5,103.6 1070.0,101.4" fill="none" stroke="#dc2626" stroke-width="2.2"/>
+<line x1="275" x2="299" y1="404" y2="404" stroke="#dc2626" stroke-width="3"/>
+<text x="305" y="408" font-size="12" font-family="Arial">direct_own_weather_holiday</text>
+<polyline points="70.0,350.0 104.5,320.5 139.0,303.2 173.4,288.2 207.9,276.7 242.4,262.1 276.9,259.2 311.4,259.3 345.9,260.4 380.3,262.6 414.8,268.1 449.3,271.9 483.8,276.6 518.3,283.3 552.8,279.6 587.2,274.8 621.7,277.6 656.2,277.1 690.7,276.3 725.2,278.2 759.7,277.9 794.1,280.0 828.6,280.4 863.1,273.0 897.6,265.9 932.1,266.8 966.6,266.9 1001.0,273.8 1035.5,276.9 1070.0,268.0" fill="none" stroke="#16a34a" stroke-width="2.2"/>
+<line x1="480" x2="504" y1="404" y2="404" stroke="#16a34a" stroke-width="3"/>
+<text x="510" y="408" font-size="12" font-family="Arial">direct_category_weather_holiday</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">2025Q4 地市预测最优 MAPE（百分比）</text>
+<text x="200" y="75.4" text-anchor="end" font-size="12" font-family="Arial">三明</text>
+<rect x="210" y="55.0" width="231.70945358626815" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="447.7094535862682" y="75.4" font-size="11" font-family="Arial">1.54%</text>
+<text x="200" y="124.15" text-anchor="end" font-size="12" font-family="Arial">龙岩</text>
+<rect x="210" y="103.75" width="261.8360612041374" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="477.8360612041374" y="124.15" font-size="11" font-family="Arial">1.74%</text>
+<text x="200" y="172.9" text-anchor="end" font-size="12" font-family="Arial">南平</text>
+<rect x="210" y="152.5" width="271.33687551962885" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="487.33687551962885" y="172.9" font-size="11" font-family="Arial">1.80%</text>
+<text x="200" y="221.65" text-anchor="end" font-size="12" font-family="Arial">漳州</text>
+<rect x="210" y="201.25" width="285.630961647906" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="501.630961647906" y="221.65" font-size="11" font-family="Arial">1.90%</text>
+<text x="200" y="270.4" text-anchor="end" font-size="12" font-family="Arial">福州</text>
+<rect x="210" y="250.0" width="286.52968053787856" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="502.52968053787856" y="270.4" font-size="11" font-family="Arial">1.91%</text>
+<text x="200" y="319.15" text-anchor="end" font-size="12" font-family="Arial">宁德</text>
+<rect x="210" y="298.75" width="330.56357229176086" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="546.5635722917609" y="319.15" font-size="11" font-family="Arial">2.20%</text>
+<text x="200" y="367.9" text-anchor="end" font-size="12" font-family="Arial">泉州</text>
+<rect x="210" y="347.5" width="370.9861198964864" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="586.9861198964863" y="367.9" font-size="11" font-family="Arial">2.47%</text>
+<text x="200" y="416.65" text-anchor="end" font-size="12" font-family="Arial">厦门</text>
+<rect x="210" y="396.25" width="460.5787728256797" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="676.5787728256797" y="416.65" font-size="11" font-family="Arial">3.06%</text>
+<text x="200" y="465.4" text-anchor="end" font-size="12" font-family="Arial">莆田</text>
+<rect x="210" y="445.0" width="700.0" height="30" fill="#2563eb" opacity="0.82"/>
+<text x="916.0" y="465.4" font-size="11" font-family="Arial">4.66%</text>
+</svg>

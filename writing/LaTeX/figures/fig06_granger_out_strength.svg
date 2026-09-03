@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700">Granger 网络节点外向预测强度</text>
+<text x="200" y="72.136" text-anchor="end" font-size="12" font-family="Arial">商业用电</text>
+<rect x="210" y="55.0" width="253.88541722167838" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="469.8854172216784" y="72.136" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="108.02690909090909" text-anchor="end" font-size="12" font-family="Arial">农业</text>
+<rect x="210" y="90.89090909090909" width="266.62286822681716" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="482.62286822681716" y="108.02690909090909" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="143.91781818181818" text-anchor="end" font-size="12" font-family="Arial">石化</text>
+<rect x="210" y="126.78181818181818" width="276.942625732996" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="492.942625732996" y="143.91781818181818" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="179.80872727272728" text-anchor="end" font-size="12" font-family="Arial">合计</text>
+<rect x="210" y="162.6727272727273" width="278.4083727917367" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="494.4083727917367" y="179.80872727272728" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="215.69963636363636" text-anchor="end" font-size="12" font-family="Arial">工业</text>
+<rect x="210" y="198.56363636363636" width="305.50039696134615" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="521.5003969613462" y="215.69963636363636" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="251.59054545454543" text-anchor="end" font-size="12" font-family="Arial">大工业电量</text>
+<rect x="210" y="234.45454545454544" width="311.2992332586462" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="527.2992332586462" y="251.59054545454543" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="287.4814545454546" text-anchor="end" font-size="12" font-family="Arial">黑色金属冶炼</text>
+<rect x="210" y="270.3454545454546" width="340.2111705129801" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="556.2111705129801" y="287.4814545454546" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="323.3723636363637" text-anchor="end" font-size="12" font-family="Arial">交通仓储和邮政业</text>
+<rect x="210" y="306.23636363636365" width="341.67195106243514" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="557.6719510624351" y="323.3723636363637" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="359.26327272727275" text-anchor="end" font-size="12" font-family="Arial">制造业</text>
+<rect x="210" y="342.1272727272727" width="349.7617865621333" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="565.7617865621332" y="359.26327272727275" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="395.1541818181818" text-anchor="end" font-size="12" font-family="Arial">信息传输</text>
+<rect x="210" y="378.0181818181818" width="396.9947136678264" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="612.9947136678263" y="395.1541818181818" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="431.0450909090909" text-anchor="end" font-size="12" font-family="Arial">电子</text>
+<rect x="210" y="413.9090909090909" width="657.5202949450093" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="873.5202949450093" y="431.0450909090909" font-size="11" font-family="Arial">0.0亿</text>
+<text x="200" y="466.93600000000004" text-anchor="end" font-size="12" font-family="Arial">纺织业</text>
+<rect x="210" y="449.8" width="730.0" height="25.2" fill="#2563eb" opacity="0.82"/>
+<text x="946.0" y="466.93600000000004" font-size="11" font-family="Arial">0.0亿</text>
+</svg>
