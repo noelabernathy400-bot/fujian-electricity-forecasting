@@ -8,6 +8,13 @@
 
 本仓库保留代码、衍生字典、结果表、图表、研究过程主文档与 LaTeX 论文源；原始电力数据不公开，以避免擅自再分发。
 
+## 论文
+
+- [NCILG English PDF](papers/NCILG_EN.pdf)
+- [NCILG 中文 PDF](papers/NCILG_CN.pdf)
+
+两份论文 PDF 已从独立的 `papers` 仓库归档至此，评阅者可在同一项目仓库中查看论文、代码和证据。
+
 ## 给评阅者的阅读路线
 
 | 想了解什么 | 从这里开始 |
