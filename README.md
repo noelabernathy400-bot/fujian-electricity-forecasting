@@ -26,7 +26,8 @@
 | 数据字段与派生表清单 | `data/dictionary/` |
 | 可执行分析脚本 | `experiments/scripts/` |
 | 已记录的图表和数值输出 | `experiments/figures/`、`experiments/outputs/` |
-| 阶段性论文源与 PDF | `writing/LaTeX/` |
+| 公开论文 PDF | [`papers/NCILG_EN.pdf`](papers/NCILG_EN.pdf)、[`papers/NCILG_CN.pdf`](papers/NCILG_CN.pdf) |
+| 阶段论文源与图表 | `writing/LaTeX/` |
 
 ## 已完成的证据链
 
